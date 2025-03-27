@@ -1,0 +1,12 @@
+
+services:
+  clickadmin:
+    build: .
+    container_name: clickadmin-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    cap_add:
+      - SYS_ADMIN
+    tty: true

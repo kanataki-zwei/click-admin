@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ClickAdmin - DB Control</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #0077cc;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: #0077cc;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    #status {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>ClickAdmin - DB Control</h1>
+
+  <button onclick="checkStatus()">Check PostgreSQL Status</button>
+  <button onclick="dbAction('start')">Start PostgreSQL</button>
+  <button onclick="dbAction('stop')">Stop PostgreSQL</button>
+  <button onclick="dbAction('restart')">Restart PostgreSQL</button>
+
+  <p id="status">Status will appear here...</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
